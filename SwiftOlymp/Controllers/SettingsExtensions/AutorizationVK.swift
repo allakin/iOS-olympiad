@@ -38,7 +38,6 @@ extension SettingsTableViewController: VKSdkDelegate, VKSdkUIDelegate {
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         print("End authorization, reload data")
-        navigationController?.popViewController(animated: true)
     }
     
     func vkSdkUserAuthorizationFailed() {

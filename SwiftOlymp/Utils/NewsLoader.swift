@@ -17,7 +17,7 @@ class NewsLoader {
         return [News]()
     }
     
-    static func loadVkNews(completionBlock: @escaping ([VkNews]) -> ()) {
+    static func loadVkNews(completionBlock: @escaping ([VkNews]?) -> ()) {
         let countRow = 20
         
         let getParameters: [String: Any] = ["filters": "post", "count": "\(countRow)"]
@@ -29,7 +29,7 @@ class NewsLoader {
                     completionBlock(prepareVkData(with: json))
                 }
             }, errorBlock: { (error) in
-                
+                completionBlock(nil)
             })
         }
     }
@@ -66,7 +66,7 @@ class NewsLoader {
         for itemJSON in itemsJSON {
             var imagesURL = [URL]()
             
-            let sourceID = itemJSON["source_id"].intValue
+            let sourceID = abs(itemJSON["source_id"].intValue)
             let dateUnixTime = itemJSON["date"].intValue
             let text = itemJSON["text"].string
             let likeCount = itemJSON["likes"]["count"].intValue
