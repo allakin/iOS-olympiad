@@ -15,7 +15,7 @@ import SafariServices
 extension SettingsTableViewController: SFSafariViewControllerDelegate {
     
     
-    func autorizeTwitter() {
+    func authorizeTwitter() {
         var swifter: Swifter
         
         let useACAccount = false
@@ -31,7 +31,6 @@ extension SettingsTableViewController: SFSafariViewControllerDelegate {
             let accountStore = ACAccountStore()
             let accountType = accountStore.accountType(withAccountTypeIdentifier: ACAccountTypeIdentifierTwitter)
             
-            // Prompt the user for permission to their twitter account stored in the phone's settings
             accountStore.requestAccessToAccounts(with: accountType, options: nil) { granted, error in
                 guard granted else {
                     self.alert(title: "Error", message: error!.localizedDescription)
@@ -45,21 +44,15 @@ extension SettingsTableViewController: SFSafariViewControllerDelegate {
                 } else {
                     let twitterAccount = twitterAccounts[0] as! ACAccount
                     swifter = Swifter(account: twitterAccount)
-                    self.fetchTwitterHomeStream()
+                    self.navigationController?.popViewController(animated: true)
                 }
             }
         } else {
             let url = URL(string: "swifter://success")!
             swifter.authorize(with: url, presentFrom: self, success: { _, _ in
-                self.fetchTwitterHomeStream()
+                self.navigationController?.popViewController(animated: true)
             }, failure: failureHandler)
         }
-    }
-    
-    func alert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
     
     @available(iOS 9.0, *)

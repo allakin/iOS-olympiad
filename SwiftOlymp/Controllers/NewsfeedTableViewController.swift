@@ -10,7 +10,7 @@ import UIKit
 import SwifteriOS
 import SafariServices
 
-class NewsfeedTableViewController: UITableViewController {
+class NewsfeedTableViewController: UITableViewController, ReloadDataDelegate {
     
     var news = [News]()
     
@@ -22,7 +22,7 @@ class NewsfeedTableViewController: UITableViewController {
         
         let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "PostTableViewCellIdentifier")
-        print(tweets[0])
+        //print(tweets[0])
     }
 
     // MARK: - Table view data source
@@ -44,6 +44,16 @@ class NewsfeedTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    //MARK: - Work with delegate
+    func reloadData(with helper: Any?, and type: SocialNetworkType) {
+        if type == .twitter {
+            guard let swifter = helper as? Swifter else { return }
+            NewsLoader.loadTwitterNews(with: swifter, completionBlock: { (tweets) in
+                
+            })
+        }
     }
 
 }
