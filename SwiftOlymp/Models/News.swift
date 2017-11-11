@@ -9,8 +9,7 @@
 import Foundation
 
 protocol News {
-    var avatarImageURL: URL { get set }
-    var name: String { get set }
+    var source: Source { get set }
     var date: Date { get set }
     var text: String? { get set }
     var imagesURL: [URL]? { get set }
