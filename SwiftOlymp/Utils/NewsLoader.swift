@@ -22,7 +22,10 @@ class NewsLoader {
         let getParameters: [String: Any] = ["filters": "post", "count": "\(countRow)"]
         if let request = VKRequest(method: "newsfeed.get", parameters: getParameters) {
             request.execute(resultBlock: { (response) in
-                
+                if let jsonResponse = response {
+                    print(jsonResponse.json)
+                    
+                }
             }, errorBlock: { (error) in
                 
             })
