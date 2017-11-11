@@ -22,12 +22,14 @@ extension SettingsTableViewController: VKSdkDelegate, VKSdkUIDelegate {
             switch state {
             case .authorized:
                 //logic to laod news
+                print("Authorized succesfull")
                 break
             case .initialized:
                 VKSdk.authorize(scope)
                 break
             case .error:
                 //alert
+                print("Alert error")
                 break
             default:
                 break
@@ -36,15 +38,16 @@ extension SettingsTableViewController: VKSdkDelegate, VKSdkUIDelegate {
     }
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        
+        print("End authorization, reload data")
+        navigationController?.popViewController(animated: true)
     }
     
     func vkSdkUserAuthorizationFailed() {
-        
+        print("Error authrization in server")
     }
     
     func vkSdkShouldPresent(_ controller: UIViewController!) {
-        
+        present(controller, animated: true, completion: nil)
     }
     
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
