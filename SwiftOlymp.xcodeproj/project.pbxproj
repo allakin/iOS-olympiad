@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23C2E86D1FB6DCF800A04C30 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C2E86B1FB6DCF800A04C30 /* PostTableViewCell.swift */; };
+		23C2E86E1FB6DCF800A04C30 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C2E86C1FB6DCF800A04C30 /* PostTableViewCell.xib */; };
 		CBA3A78D1FB4FEA800308FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */; };
 		CBA3A78F1FB4FEA800308FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */; };
 		CBA3A7921FB4FEA800308FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA3A7901FB4FEA800308FB7 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23C2E86B1FB6DCF800A04C30 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		23C2E86C1FB6DCF800A04C30 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		CBA3A7891FB4FEA800308FB7 /* SwiftOlymp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOlymp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23C2E8681FB6DC4D00A04C30 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		23C2E8691FB6DC6600A04C30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23C2E86A1FB6DC6C00A04C30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				23C2E86B1FB6DCF800A04C30 /* PostTableViewCell.swift */,
+				23C2E86C1FB6DCF800A04C30 /* PostTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CBA3A7801FB4FEA800308FB7 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +82,10 @@
 		CBA3A78B1FB4FEA800308FB7 /* SwiftOlymp */ = {
 			isa = PBXGroup;
 			children = (
+				23C2E86A1FB6DC6C00A04C30 /* Views */,
+				23C2E8691FB6DC6600A04C30 /* Models */,
+				23C2E8681FB6DC4D00A04C30 /* Controllers */,
 				CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */,
-				CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */,
 				CBA3A7901FB4FEA800308FB7 /* Main.storyboard */,
 				CBA3A7931FB4FEA800308FB7 /* Assets.xcassets */,
 				CBA3A7951FB4FEA800308FB7 /* LaunchScreen.storyboard */,
@@ -126,6 +156,7 @@
 				CBA3A7971FB4FEA800308FB7 /* LaunchScreen.storyboard in Resources */,
 				CBA3A7941FB4FEA800308FB7 /* Assets.xcassets in Resources */,
 				CBA3A7921FB4FEA800308FB7 /* Main.storyboard in Resources */,
+				23C2E86E1FB6DCF800A04C30 /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +169,7 @@
 			files = (
 				CBA3A78F1FB4FEA800308FB7 /* ViewController.swift in Sources */,
 				CBA3A78D1FB4FEA800308FB7 /* AppDelegate.swift in Sources */,
+				23C2E86D1FB6DCF800A04C30 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
