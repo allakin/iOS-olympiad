@@ -21,7 +21,6 @@ extension SettingsTableViewController: VKSdkDelegate, VKSdkUIDelegate {
         VKSdk.wakeUpSession(scope) { (state, error) in
             switch state {
             case .authorized:
-                //logic to laod news
                 print("Authorized succesfull")
                 break
             case .initialized:
