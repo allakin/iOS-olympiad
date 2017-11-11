@@ -20,12 +20,32 @@
 		23C517A41FB71DB2000FBD6B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C517A31FB71DB2000FBD6B /* News.swift */; };
 		23C517A61FB71EBE000FBD6B /* VkNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C517A51FB71EBE000FBD6B /* VkNews.swift */; };
 		23C517A91FB721CB000FBD6B /* NewsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C517A81FB721CB000FBD6B /* NewsLoader.swift */; };
+		950978171FB7304A00F68431 /* Swifter-master in Resources */ = {isa = PBXBuildFile; fileRef = 950978161FB7304900F68431 /* Swifter-master */; };
+		9509781F1FB7362100F68431 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509781E1FB7362100F68431 /* AuthViewController.swift */; };
+		950978231FB73D5600F68431 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950978221FB73D5600F68431 /* SwifteriOS.framework */; };
+		950978241FB73D7A00F68431 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950978221FB73D5600F68431 /* SwifteriOS.framework */; };
+		950978251FB73D7A00F68431 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 950978221FB73D5600F68431 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		950978281FB7715000F68431 /* AutorizationTwitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950978271FB7715000F68431 /* AutorizationTwitter.swift */; };
 		CBA3A78D1FB4FEA800308FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */; };
 		CBA3A78F1FB4FEA800308FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */; };
 		CBA3A7921FB4FEA800308FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA3A7901FB4FEA800308FB7 /* Main.storyboard */; };
 		CBA3A7941FB4FEA800308FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA3A7931FB4FEA800308FB7 /* Assets.xcassets */; };
 		CBA3A7971FB4FEA800308FB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA3A7951FB4FEA800308FB7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		950978261FB73D7A00F68431 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				950978251FB73D7A00F68431 /* SwifteriOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		236908F21FB6EC1F0086ED78 /* AuthorizationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +61,10 @@
 		23C517A31FB71DB2000FBD6B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		23C517A51FB71EBE000FBD6B /* VkNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkNews.swift; sourceTree = "<group>"; };
 		23C517A81FB721CB000FBD6B /* NewsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLoader.swift; sourceTree = "<group>"; };
+		950978161FB7304900F68431 /* Swifter-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Swifter-master"; sourceTree = "<group>"; };
+		9509781E1FB7362100F68431 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		950978221FB73D5600F68431 /* SwifteriOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwifteriOS.framework; path = Carthage/Build/iOS/SwifteriOS.framework; sourceTree = "<group>"; };
+		950978271FB7715000F68431 /* AutorizationTwitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationTwitter.swift; sourceTree = "<group>"; };
 		CBA3A7891FB4FEA800308FB7 /* SwiftOlymp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOlymp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950978231FB73D5600F68431 /* SwifteriOS.framework in Frameworks */,
 				23C2E8711FB6E65A00A04C30 /* VKSdkFramework.framework in Frameworks */,
+				950978241FB73D7A00F68431 /* SwifteriOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +103,7 @@
 				CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */,
 				23C517981FB6EEE0000FBD6B /* SettingsTableViewController.swift */,
 				23C517A11FB717EB000FBD6B /* NewsfeedTableViewController.swift */,
+				9509781E1FB7362100F68431 /* AuthViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,6 +132,7 @@
 		23C2E86F1FB6E65A00A04C30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				950978221FB73D5600F68431 /* SwifteriOS.framework */,
 				23C2E8701FB6E65A00A04C30 /* VKSdkFramework.framework */,
 			);
 			name = Frameworks;
@@ -114,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				23C5179E1FB7049E000FBD6B /* AutorizationVK.swift */,
+				950978271FB7715000F68431 /* AutorizationTwitter.swift */,
 			);
 			path = SettingsExtensions;
 			sourceTree = "<group>";
@@ -146,6 +175,7 @@
 		CBA3A78B1FB4FEA800308FB7 /* SwiftOlymp */ = {
 			isa = PBXGroup;
 			children = (
+				950978161FB7304900F68431 /* Swifter-master */,
 				23C517A71FB721BE000FBD6B /* Utils */,
 				236908EF1FB6EA190086ED78 /* Protocols */,
 				23C2E86A1FB6DC6C00A04C30 /* Views */,
@@ -171,6 +201,7 @@
 				CBA3A7861FB4FEA800308FB7 /* Frameworks */,
 				CBA3A7871FB4FEA800308FB7 /* Resources */,
 				23C2E8721FB6E69800A04C30 /* ShellScript */,
+				950978261FB73D7A00F68431 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,6 +256,7 @@
 				CBA3A7941FB4FEA800308FB7 /* Assets.xcassets in Resources */,
 				CBA3A7921FB4FEA800308FB7 /* Main.storyboard in Resources */,
 				23C2E86E1FB6DCF800A04C30 /* PostTableViewCell.xib in Resources */,
+				950978171FB7304A00F68431 /* Swifter-master in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +292,11 @@
 				23C5179B1FB6EF4C000FBD6B /* SocialNetwork.swift in Sources */,
 				23C517A61FB71EBE000FBD6B /* VkNews.swift in Sources */,
 				23C2E8771FB6E90000A04C30 /* SocialNetworkTableViewCell.swift in Sources */,
+				9509781F1FB7362100F68431 /* AuthViewController.swift in Sources */,
 				236908F31FB6EC1F0086ED78 /* AuthorizationDelegate.swift in Sources */,
 				23C2E86D1FB6DCF800A04C30 /* PostTableViewCell.swift in Sources */,
 				23C517A41FB71DB2000FBD6B /* News.swift in Sources */,
+				950978281FB7715000F68431 /* AutorizationTwitter.swift in Sources */,
 				23C517991FB6EEE0000FBD6B /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,15 +435,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W56K4E4L5F;
+				DEVELOPMENT_TEAM = 77843YCLH4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SwiftOlymp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.SwiftOlymp;
+				PRODUCT_BUNDLE_IDENTIFIER = blvvvck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -420,15 +455,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W56K4E4L5F;
+				DEVELOPMENT_TEAM = 77843YCLH4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SwiftOlymp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.SwiftOlymp;
+				PRODUCT_BUNDLE_IDENTIFIER = blvvvck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xa8-Go-q02">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2fG-29-M1C">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Newsfeed Table View Controller-->
         <scene sceneID="5Fi-Pd-tG5">
             <objects>
-                <tableViewController id="c16-KO-Lyg" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TweetsViewController" id="c16-KO-Lyg" customClass="NewsfeedTableViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hWJ-L3-Pfz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +32,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djG-R6-zSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442.4000000000001" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1781.5999999999999" y="37.331334332833585"/>
         </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="0et-qL-teT">
@@ -50,7 +51,35 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rx-eq-PmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2284" y="35.532233883058474"/>
+            <point key="canvasLocation" x="2623.1999999999998" y="35.532233883058474"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="Js1-Lv-tPH">
+            <objects>
+                <viewController id="AZr-tC-IBe" customClass="AuthViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OXj-Iv-e6z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMj-AQ-dcM">
+                                <rect key="frame" x="42" y="302" width="290" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ButtonTwitterNormal">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTouchUpInsideLoginButton:" destination="AZr-tC-IBe" eventType="touchUpInside" id="KLv-tb-sLD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="baV-hW-2mb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NWf-aX-kNm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5G-kt-tyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284" y="96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PVE-Hr-ucZ">
@@ -68,7 +97,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqf-d4-ue7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="37"/>
+            <point key="canvasLocation" x="1105" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fKP-e8-Fbx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2fG-29-M1C" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VKX-gY-1Tu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AZr-tC-IBe" kind="relationship" relationship="rootViewController" id="aiY-IA-vqd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGQ-0G-7X6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164.80000000000001" y="96.251874062968525"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ButtonTwitterNormal" width="290" height="62"/>
+    </resources>
 </document>

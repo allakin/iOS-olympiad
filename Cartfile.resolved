@@ -1,1 +1,2 @@
 github "VKCOM/vk-ios-sdk" "1.4.6"
+github "mattdonnelly/Swifter" "2.1.0"

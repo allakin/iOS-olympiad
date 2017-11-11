@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 struct SocialNetwork {
     var name: String
     var authrizationStatus: Bool
