@@ -75,7 +75,7 @@ extension SettingsTableViewController: AuthorizationDelegate {
         case .facebook:
             authorizationFacebook()
         case .instagram:
-            authorizationInstagram()
+            authorizeInstagram()
         }
     }
 
@@ -84,9 +84,6 @@ extension SettingsTableViewController: AuthorizationDelegate {
         
     }
     
-    func authorizationInstagram() {
-        
-    }
 }
 
 

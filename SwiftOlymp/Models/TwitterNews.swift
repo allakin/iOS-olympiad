@@ -9,8 +9,7 @@
 import Foundation
 
 struct TwitterNews: News {
-    var avatarImageURL: URL
-    var name: String
+    var source: Source
     var date: Date
     var text: String?
     var imagesURL: [URL]?
