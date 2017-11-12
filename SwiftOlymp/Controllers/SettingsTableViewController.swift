@@ -17,6 +17,7 @@ class SettingsTableViewController: UITableViewController {
         SocialNetwork(name: "Instagram", authrizationStatus: false, type: .instagram)
     ]
     let socialNetworkCellIdentifier = "socialNetworkCell"
+    var reloadDataDelegate: ReloadDataDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +76,8 @@ extension SettingsTableViewController: AuthorizationDelegate {
         case .facebook:
             authorizationFacebook()
         case .instagram:
-            authorizeInstagram()
+            //authorizeInstagram()
+            break
         }
     }
 

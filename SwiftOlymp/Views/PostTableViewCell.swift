@@ -18,6 +18,7 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
     @IBOutlet weak var repostCountLabel: UILabel!
+    @IBOutlet weak var sourceLabel: UILabel!
     
     @IBOutlet weak var avatarToCollectionConstraint: NSLayoutConstraint!
     @IBOutlet weak var textToLikeConstraint: NSLayoutConstraint!
@@ -25,7 +26,7 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
     @IBOutlet weak var textToCollectionConstraint: NSLayoutConstraint!
     
     let photoCellIdentifier = "photoCollectionCellIdentifier"
-    var photos: [UIImage]!
+    var photos = [UIImage]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,7 +42,7 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
         nameLabel.text = source.name
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
         dateLabel.text = dateFormatter.string(from: news.date)
         
         if let text = news.text {
@@ -51,6 +52,12 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
         likeCountLabel.text = String(news.likeCount)
         commentCountLabel.text = String(news.commentCount)
         repostCountLabel.text = String(news.repostCount)
+        
+        if news is VkNews {
+            sourceLabel.text = "VK"
+        } else if news is TwitterNews {
+            sourceLabel.text = "Twitter"
+        }
     }
    
     func registrCell(){
@@ -65,25 +72,24 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
     
     private func prepareConstraints(with news: News) {
         
-        
         if news.text == nil, news.imagesURL != nil {
             textContentLabel.isHidden = true
             avatarToTextConstraint.priority = .defaultLow
             avatarToCollectionConstraint.priority = .defaultHigh
         }
-        
+
         if news.text != nil, news.imagesURL != nil {
             textContentLabel.isHidden = false
             avatarToTextConstraint.priority = .defaultHigh
             avatarToCollectionConstraint.priority = .defaultLow
         }
-        
+
         if news.text != nil, news.imagesURL == nil {
             photoCollectionView.isHidden = true
             textToCollectionConstraint.priority = .defaultLow
             textToLikeConstraint.priority = .defaultHigh
         }
-        if news.text != nil, news.imagesURL != nil{
+        if news.text != nil, news.imagesURL != nil {
             photoCollectionView.isHidden = false
             textToCollectionConstraint.priority = .defaultHigh
             textToLikeConstraint.priority = .defaultLow

@@ -26,7 +26,6 @@
 		9509782A1FB7788200F68431 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950978291FB7788200F68431 /* Extensions.swift */; };
 		9509782C1FB77B5F00F68431 /* ReloadDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509782B1FB77B5F00F68431 /* ReloadDataDelegate.swift */; };
 		9509782E1FB77E6900F68431 /* TwitterNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509782D1FB77E6900F68431 /* TwitterNews.swift */; };
-		95220DA71FB8923F00633E7A /* AutorizationInstagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DA61FB8923F00633E7A /* AutorizationInstagram.swift */; };
 		95220DAB1FB8977E00633E7A /* InstagramLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DAA1FB8977E00633E7A /* InstagramLoginViewController.swift */; };
 		95220DAD1FB89CB700633E7A /* TwitterNewsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DAC1FB89CB700633E7A /* TwitterNewsLoader.swift */; };
 		95220DB51FB8B35800633E7A /* InstagramNewsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DB41FB8B35800633E7A /* InstagramNewsLoader.swift */; };
@@ -475,14 +474,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77843YCLH4;
+				DEVELOPMENT_TEAM = W56K4E4L5F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SwiftOlymp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = blvvvck;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.SwiftOlymp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
@@ -495,14 +494,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77843YCLH4;
+				DEVELOPMENT_TEAM = W56K4E4L5F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SwiftOlymp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = blvvvck;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.timbaev.SwiftOlymp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;

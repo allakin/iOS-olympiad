@@ -21,6 +21,7 @@ extension SettingsTableViewController: VKSdkDelegate, VKSdkUIDelegate {
         VKSdk.wakeUpSession(scope) { (state, error) in
             switch state {
             case .authorized:
+                self.reloadDataDelegate?.reloadData(with: nil, and: .vk)
                 print("Authorized succesfull")
                 break
             case .initialized:

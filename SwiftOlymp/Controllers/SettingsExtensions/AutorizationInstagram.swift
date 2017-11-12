@@ -6,7 +6,6 @@
 //  Copyright © 2017 iOS Lab ITIS. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension SettingsTableViewController {
