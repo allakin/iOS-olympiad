@@ -8,6 +8,7 @@
 
 import UIKit
 import VKSdkFramework
+import SwifteriOS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         VKSdk.processOpen(url as URL!, fromApplication: sourceApplication)
+        Swifter.handleOpenURL(url)
         
         return true
     }

@@ -78,10 +78,7 @@ extension SettingsTableViewController: AuthorizationDelegate {
             authorizationInstagram()
         }
     }
-    
-    func authorizeTwitter() {
-        
-    }
+
     
     func authorizationFacebook() {
         

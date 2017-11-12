@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SwifteriOS
+import SafariServices
 
-class NewsfeedTableViewController: UITableViewController {
+class NewsfeedTableViewController: UITableViewController, ReloadDataDelegate {
     
     var news = [News]()
     let postCellIdentifier = "postCell"
@@ -49,6 +51,10 @@ class NewsfeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return news.count
     }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: postCellIdentifier, for: indexPath) as! PostTableViewCell
@@ -57,4 +63,5 @@ class NewsfeedTableViewController: UITableViewController {
         
         return cell
     }
+
 }

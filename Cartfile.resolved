@@ -1,2 +1,3 @@
 github "SwiftyJSON/SwiftyJSON" "4.0.0"
 github "VKCOM/vk-ios-sdk" "1.4.6"
+github "mattdonnelly/Swifter" "2.1.0"
