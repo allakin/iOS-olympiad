@@ -28,15 +28,14 @@
 				<string>vk6255106</string>
 			</array>
 		</dict>
-        
-        <dict>
-            <key>CFBundleURLName</key>
-            <string>com.mattdonnelly.swifter-scheme</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>swifter</string>
-            </array>
-        </dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.mattdonnelly.swifter-scheme</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>swifter</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

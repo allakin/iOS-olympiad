@@ -25,7 +25,7 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
     @IBOutlet weak var textToCollectionConstraint: NSLayoutConstraint!
     
     let photoCellIdentifier = "photoCollectionCellIdentifier"
-    var photos: [UIImage]!
+    var photos = [UIImage]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
