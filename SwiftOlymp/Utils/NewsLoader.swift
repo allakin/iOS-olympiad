@@ -92,4 +92,6 @@ class NewsLoader {
         return vkNewsArray
     }
     
+    
+    
 }
