@@ -75,6 +75,7 @@ extension SettingsTableViewController: AuthorizationDelegate {
             authorizeTwitter()
         case .facebook:
             authorizationFacebook()
+            //authorizeInstagram()
         case .instagram:
             //authorizeInstagram()
             break

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xa8-Go-q02">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="smZ-mH-myY">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="TweetsViewController" id="c16-KO-Lyg" customClass="NewsfeedTableViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hWJ-L3-Pfz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -39,7 +39,7 @@
             <objects>
                 <tableViewController id="F29-x0-FDe" customClass="SettingsTableViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LCd-vG-F7d">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections/>
@@ -61,7 +61,7 @@
             <objects>
                 <viewController id="0C6-KJ-sMC" customClass="InstagramLoginViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4o8-x1-uwn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJi-po-ecT">
@@ -81,13 +81,162 @@
             </objects>
             <point key="canvasLocation" x="3638" y="36"/>
         </scene>
+        <!--Lentakrut View Controller-->
+        <scene sceneID="BCE-Bb-snk">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="smZ-mH-myY" customClass="LentakrutViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyt-Kh-7R0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-492" y="36"/>
+        </scene>
+        <!--First Page View Controller-->
+        <scene sceneID="YL1-xu-gBx">
+            <objects>
+                <viewController storyboardIdentifier="FirstPageViewController" id="PZw-zx-Bos" customClass="FirstPageViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AN0-H5-MB9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6R1-XF-BoH">
+                                <rect key="frame" x="8" y="506" width="304" height="30"/>
+                                <state key="normal" title="Пропусить"/>
+                                <connections>
+                                    <segue destination="xa8-Go-q02" kind="show" id="hxN-AP-lkV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Устал крутить ленту в разных местах?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-5V-aBO">
+                                <rect key="frame" x="8" y="87" width="304" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-news" translatesAutoresizingMaskIntoConstraints="NO" id="JoM-7O-tGV">
+                                <rect key="frame" x="40.5" y="194" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FKB-ba-5c9"/>
+                                    <constraint firstAttribute="height" constant="240" id="nS3-nn-fli"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6R1-XF-BoH" firstAttribute="leading" secondItem="559-v3-P7y" secondAttribute="leading" constant="8" id="60f-ZC-bQQ"/>
+                            <constraint firstItem="dCW-5V-aBO" firstAttribute="top" secondItem="559-v3-P7y" secondAttribute="top" constant="67" id="GLZ-vf-5SF"/>
+                            <constraint firstItem="559-v3-P7y" firstAttribute="bottom" secondItem="6R1-XF-BoH" secondAttribute="bottom" constant="32" id="KaC-I3-Eur"/>
+                            <constraint firstAttribute="trailing" secondItem="dCW-5V-aBO" secondAttribute="trailing" constant="8" id="cSh-aN-UIc"/>
+                            <constraint firstItem="dCW-5V-aBO" firstAttribute="leading" secondItem="AN0-H5-MB9" secondAttribute="leading" constant="8" id="eYo-Oj-59q"/>
+                            <constraint firstItem="JoM-7O-tGV" firstAttribute="centerX" secondItem="559-v3-P7y" secondAttribute="centerX" id="faY-jI-3nA"/>
+                            <constraint firstItem="JoM-7O-tGV" firstAttribute="top" secondItem="559-v3-P7y" secondAttribute="top" constant="174" id="g9W-x9-Piu"/>
+                            <constraint firstItem="559-v3-P7y" firstAttribute="trailing" secondItem="6R1-XF-BoH" secondAttribute="trailing" constant="8" id="tCO-KS-7LE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="559-v3-P7y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mnj-aD-dNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="-658.09859154929575"/>
+        </scene>
+        <!--Second Page View Controller-->
+        <scene sceneID="yYp-4P-y5S">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8L-YG-lZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="SecondPageViewController" id="jXB-ID-E37" customClass="SecondPageViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kNm-Zs-vZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RB2-cB-Bqj">
+                                <rect key="frame" x="8" y="506" width="304" height="30"/>
+                                <state key="normal" title=" Пропустить"/>
+                                <connections>
+                                    <segue destination="xa8-Go-q02" kind="show" id="zxo-Wr-ZRk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-new" translatesAutoresizingMaskIntoConstraints="NO" id="QI8-c0-QP0">
+                                <rect key="frame" x="40" y="174" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="OXl-VB-lQW"/>
+                                    <constraint firstAttribute="width" constant="240" id="TQi-rX-MtJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хочется чего-то нового..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewl-J9-neP">
+                                <rect key="frame" x="8" y="87" width="304" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K8T-lE-sS3" firstAttribute="trailing" secondItem="RB2-cB-Bqj" secondAttribute="trailing" constant="8" id="97f-Rg-zrS"/>
+                            <constraint firstItem="QI8-c0-QP0" firstAttribute="centerY" secondItem="K8T-lE-sS3" secondAttribute="centerY" id="DwW-7a-QqX"/>
+                            <constraint firstItem="K8T-lE-sS3" firstAttribute="trailing" secondItem="ewl-J9-neP" secondAttribute="trailing" constant="8" id="KHf-l0-cMA"/>
+                            <constraint firstItem="ewl-J9-neP" firstAttribute="top" secondItem="K8T-lE-sS3" secondAttribute="top" constant="67" id="Qhn-aF-aUW"/>
+                            <constraint firstItem="QI8-c0-QP0" firstAttribute="centerX" secondItem="K8T-lE-sS3" secondAttribute="centerX" id="beK-GH-2y1"/>
+                            <constraint firstItem="ewl-J9-neP" firstAttribute="leading" secondItem="K8T-lE-sS3" secondAttribute="leading" constant="8" id="psg-TE-ukq"/>
+                            <constraint firstItem="K8T-lE-sS3" firstAttribute="bottom" secondItem="RB2-cB-Bqj" secondAttribute="bottom" constant="32" id="qsx-hj-F0N"/>
+                            <constraint firstItem="RB2-cB-Bqj" firstAttribute="leading" secondItem="K8T-lE-sS3" secondAttribute="leading" constant="8" id="tZ8-z1-BbK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K8T-lE-sS3"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="257" y="36"/>
+        </scene>
+        <!--Third Page View Controller-->
+        <scene sceneID="yG6-tj-inI">
+            <objects>
+                <viewController storyboardIdentifier="ThirdPageViewController" id="PFZ-wt-JMF" customClass="ThirdPageViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JV3-eA-hMP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOY-eE-aL1">
+                                <rect key="frame" x="8" y="506" width="304" height="30"/>
+                                <state key="normal" title="Пропустить"/>
+                                <connections>
+                                    <segue destination="xa8-Go-q02" kind="show" id="AaZ-kk-a6O"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы собрали твои ленты в одно место, Добро пожаловать в Лентакрут!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBG-lf-Ymb">
+                                <rect key="frame" x="8" y="87" width="304" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-idea" translatesAutoresizingMaskIntoConstraints="NO" id="8lD-pg-gzY">
+                                <rect key="frame" x="40" y="174" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Bbe-tv-Fdq"/>
+                                    <constraint firstAttribute="width" constant="240" id="FwQ-pa-joN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZBG-lf-Ymb" firstAttribute="top" secondItem="8s1-JV-GfP" secondAttribute="top" constant="67" id="9Kk-dj-ONh"/>
+                            <constraint firstItem="NOY-eE-aL1" firstAttribute="leading" secondItem="8s1-JV-GfP" secondAttribute="leading" constant="8" id="Be1-hR-4kI"/>
+                            <constraint firstAttribute="trailing" secondItem="ZBG-lf-Ymb" secondAttribute="trailing" constant="8" id="UOg-Vs-ZUK"/>
+                            <constraint firstItem="8s1-JV-GfP" firstAttribute="trailing" secondItem="NOY-eE-aL1" secondAttribute="trailing" constant="8" id="cV6-rZ-8Js"/>
+                            <constraint firstItem="8lD-pg-gzY" firstAttribute="centerY" secondItem="8s1-JV-GfP" secondAttribute="centerY" id="dVT-YF-KNR"/>
+                            <constraint firstItem="ZBG-lf-Ymb" firstAttribute="leading" secondItem="8s1-JV-GfP" secondAttribute="leading" constant="8" id="lqM-mF-zRN"/>
+                            <constraint firstItem="8s1-JV-GfP" firstAttribute="bottom" secondItem="NOY-eE-aL1" secondAttribute="bottom" constant="32" id="mfr-Zx-R9Y"/>
+                            <constraint firstItem="8lD-pg-gzY" firstAttribute="centerX" secondItem="8s1-JV-GfP" secondAttribute="centerX" id="p1M-6b-9PK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8s1-JV-GfP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kb1-op-qq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256.80000000000001" y="743.47826086956525"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="PVE-Hr-ucZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xa8-Go-q02" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QLr-FM-sQF">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -101,6 +250,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-idea" width="768" height="768"/>
+        <image name="icon-new" width="256" height="256"/>
+        <image name="icon-news" width="512" height="512"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AaZ-kk-a6O"/>
+    </inferredMetricsTieBreakers>
         <image name="settings" width="25" height="25"/>
     </resources>
 </document>

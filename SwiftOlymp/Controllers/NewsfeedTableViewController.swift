@@ -12,6 +12,11 @@ import SafariServices
 
 class NewsfeedTableViewController: UITableViewController {
     
+    func reloadData(with helper: Any?, and type: SocialNetworkType) {
+        
+    }
+    
+    
     var news = [News]()
     let postCellIdentifier = "postCell"
     let settingSegueIdentifier = "settingsSegue"
