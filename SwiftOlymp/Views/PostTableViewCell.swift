@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Kingfisher
 
-class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollectionViewDelegate {
+class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -26,19 +27,22 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
     @IBOutlet weak var textToCollectionConstraint: NSLayoutConstraint!
     
     let photoCellIdentifier = "photoCollectionCellIdentifier"
-    var photos = [UIImage]()
+    var photosURL = [URL]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         registrCell()
         setDelegateAndDataSource()
+        
     }
 
     func prepareCell(with news: News) {
         prepareConstraints(with: news)
+        photosURL = news.imagesURL
+        photoCollectionView.reloadData()
         
         let source = news.source
-        //avatar
+        avatarImageView.kf.setImage(with: source.avatarImageURL)
         nameLabel.text = source.name
         
         let dateFormatter = DateFormatter()
@@ -48,7 +52,6 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
         if let text = news.text {
             textContentLabel.text = text
         }
-        //collectionView
         likeCountLabel.text = String(news.likeCount)
         commentCountLabel.text = String(news.commentCount)
         repostCountLabel.text = String(news.repostCount)
@@ -72,37 +75,41 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
     
     private func prepareConstraints(with news: News) {
         
-        if news.text == nil, news.imagesURL != nil {
+        if news.text == nil, !news.imagesURL.isEmpty {
             textContentLabel.isHidden = true
             avatarToTextConstraint.priority = .defaultLow
             avatarToCollectionConstraint.priority = .defaultHigh
         }
 
-        if news.text != nil, news.imagesURL != nil {
+        if news.text != nil, !news.imagesURL.isEmpty {
             textContentLabel.isHidden = false
             avatarToTextConstraint.priority = .defaultHigh
             avatarToCollectionConstraint.priority = .defaultLow
         }
 
-        if news.text != nil, news.imagesURL == nil {
+        if news.text != nil, news.imagesURL.isEmpty {
             photoCollectionView.isHidden = true
             textToCollectionConstraint.priority = .defaultLow
             textToLikeConstraint.priority = .defaultHigh
         }
-        if news.text != nil, news.imagesURL != nil {
+        if news.text != nil, !news.imagesURL.isEmpty {
             photoCollectionView.isHidden = false
             textToCollectionConstraint.priority = .defaultHigh
             textToLikeConstraint.priority = .defaultLow
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200, height: 140)
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        return photosURL.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCellIdentifier, for: indexPath) as! PhotoCustomCollectionViewCell
-        cell.prepareCell(with: photos[indexPath.row])
+        cell.photoImageView.kf.setImage(with: photosURL[indexPath.row])
         return cell
     }
     

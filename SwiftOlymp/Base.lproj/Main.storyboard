@@ -23,7 +23,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="EFg-SN-Zy3">
-                        <barButtonItem key="leftBarButtonItem" title="settings" id="NWY-F2-fDG">
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="NWY-F2-fDG">
                             <connections>
                                 <segue destination="F29-x0-FDe" kind="show" identifier="settingsSegue" id="H1v-qe-tJV"/>
                             </connections>
@@ -100,4 +100,7 @@
             <point key="canvasLocation" x="1105" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="25" height="25"/>
+    </resources>
 </document>

@@ -35,6 +35,7 @@
 		CB6A9AA71FB8A2E8009B04A8 /* PhotoCustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A9AA51FB8A2E8009B04A8 /* PhotoCustomCollectionViewCell.xib */; };
 		CB6A9AAA1FB8BE67009B04A8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A9AA81FB8BE66009B04A8 /* PostTableViewCell.swift */; };
 		CB6A9AAB1FB8BE67009B04A8 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A9AA91FB8BE67009B04A8 /* PostTableViewCell.xib */; };
+		CB6A9AAD1FB8E2AB009B04A8 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6A9AAC1FB8E2AB009B04A8 /* Kingfisher.framework */; };
 		CBA3A78D1FB4FEA800308FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */; };
 		CBA3A78F1FB4FEA800308FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */; };
 		CBA3A7921FB4FEA800308FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA3A7901FB4FEA800308FB7 /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		CB6A9AA51FB8A2E8009B04A8 /* PhotoCustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		CB6A9AA81FB8BE66009B04A8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CB6A9AA91FB8BE67009B04A8 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		CB6A9AAC1FB8E2AB009B04A8 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		CBA3A7891FB4FEA800308FB7 /* SwiftOlymp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOlymp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				950978231FB73D5600F68431 /* SwifteriOS.framework in Frameworks */,
+				CB6A9AAD1FB8E2AB009B04A8 /* Kingfisher.framework in Frameworks */,
 				23C2E8711FB6E65A00A04C30 /* VKSdkFramework.framework in Frameworks */,
 				950978241FB73D7A00F68431 /* SwifteriOS.framework in Frameworks */,
 				CB022CB21FB76C7700B7E1AC /* SwiftyJSON.framework in Frameworks */,
@@ -157,6 +160,7 @@
 		23C2E86F1FB6E65A00A04C30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB6A9AAC1FB8E2AB009B04A8 /* Kingfisher.framework */,
 				950978221FB73D5600F68431 /* SwifteriOS.framework */,
 				CB022CB11FB76C7700B7E1AC /* SwiftyJSON.framework */,
 				23C2E8701FB6E65A00A04C30 /* VKSdkFramework.framework */,
@@ -302,6 +306,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/VKSdkFramework.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 			);
