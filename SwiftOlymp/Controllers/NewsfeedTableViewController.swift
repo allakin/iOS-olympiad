@@ -13,16 +13,33 @@ import SafariServices
 class NewsfeedTableViewController: UITableViewController, ReloadDataDelegate {
     
     var news = [News]()
-    
-    var tweets : [JSON] = []
-    let reuseIdentifier: String = "reuseIdentifier"
+    let postCellIdentifier = "postCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareTableView()
+        generateData()
+    }
+    
+    //MARK: - Prepare methods
+    
+    func prepareTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
         
-        let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "PostTableViewCellIdentifier")
-        //print(tweets[0])
+        let postNib = UINib(nibName: "PostTableViewCell", bundle: nil)
+        tableView.register(postNib, forCellReuseIdentifier: postCellIdentifier)
+    }
+    
+    func generateData() {
+        let source = Source(name: "iOS Developer", avatarImageURL: URL(string: "vk.com")!)
+        let vkNews1 = VkNews(source: source, date: Date(), text: "Post with text", imagesURL: nil, videosURL: nil, likeCount: 5, commentCount: 9, repostCount: 11, audiosURL: nil, links: nil)
+        let vkNews2 = VkNews(source: source, date: Date(), text: nil, imagesURL: [(URL(string: "vk.com")!)], videosURL: nil, likeCount: 78, commentCount: 6, repostCount: 43, audiosURL: nil, links: nil)
+        let vkNews3 = VkNews(source: source, date: Date(), text: "Post with text and Image", imagesURL: [(URL(string: "vk.com")!)], videosURL: nil, likeCount: 65, commentCount: 5, repostCount: 98, audiosURL: nil, links: nil)
+        
+        news.append(vkNews1)
+        news.append(vkNews2)
+        news.append(vkNews3)
     }
 
     // MARK: - Table view data source
@@ -32,21 +49,19 @@ class NewsfeedTableViewController: UITableViewController, ReloadDataDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tweets.count
+        return news.count
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
     
-    //MARK: - Work with delegate
-    func reloadData(with helper: Any?, and type: SocialNetworkType) {
-        if type == .twitter {
-            guard let swifter = helper as? Swifter else { return }
-            NewsLoader.loadTwitterNews(with: swifter, completionBlock: { (tweets) in
-                
-            })
-        }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: postCellIdentifier, for: indexPath) as! PostTableViewCell
+        
+        cell.prepareCell(with: news[indexPath.row])
+        
+        return cell
     }
 
 }
