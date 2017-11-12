@@ -40,6 +40,7 @@
 		CB6A9AAA1FB8BE67009B04A8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A9AA81FB8BE66009B04A8 /* PostTableViewCell.swift */; };
 		CB6A9AAB1FB8BE67009B04A8 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A9AA91FB8BE67009B04A8 /* PostTableViewCell.xib */; };
 		CB6A9AAD1FB8E2AB009B04A8 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6A9AAC1FB8E2AB009B04A8 /* Kingfisher.framework */; };
+		CB6A9AAF1FB8FC31009B04A8 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A9AAE1FB8FC31009B04A8 /* ImageLoader.swift */; };
 		CBA3A78D1FB4FEA800308FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */; };
 		CBA3A78F1FB4FEA800308FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */; };
 		CBA3A7921FB4FEA800308FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA3A7901FB4FEA800308FB7 /* Main.storyboard */; };
@@ -94,6 +95,7 @@
 		CB6A9AA81FB8BE66009B04A8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CB6A9AA91FB8BE67009B04A8 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		CB6A9AAC1FB8E2AB009B04A8 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		CB6A9AAE1FB8FC31009B04A8 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		CBA3A7891FB4FEA800308FB7 /* SwiftOlymp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOlymp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				950978291FB7788200F68431 /* Extensions.swift */,
 				95220DAC1FB89CB700633E7A /* TwitterNewsLoader.swift */,
 				95220DB41FB8B35800633E7A /* InstagramNewsLoader.swift */,
+				CB6A9AAE1FB8FC31009B04A8 /* ImageLoader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				C70E78311FB8CC5E00B76F73 /* ThirdPageViewController.swift in Sources */,
 				C70E782E1FB8CC4400B76F73 /* SecondPageViewController.swift in Sources */,
 				23C5179B1FB6EF4C000FBD6B /* SocialNetwork.swift in Sources */,
+				CB6A9AAF1FB8FC31009B04A8 /* ImageLoader.swift in Sources */,
 				CB6A9AA61FB8A2E8009B04A8 /* PhotoCustomCollectionViewCell.swift in Sources */,
 				23C517A61FB71EBE000FBD6B /* VkNews.swift in Sources */,
 				23C2E8771FB6E90000A04C30 /* SocialNetworkTableViewCell.swift in Sources */,

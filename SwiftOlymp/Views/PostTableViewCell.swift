@@ -43,6 +43,7 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
         
         let source = news.source
         avatarImageView.kf.setImage(with: source.avatarImageURL)
+        avatarImageView.image = #imageLiteral(resourceName: "icon-news")
         nameLabel.text = source.name
         
         let dateFormatter = DateFormatter()

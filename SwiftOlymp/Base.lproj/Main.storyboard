@@ -253,10 +253,9 @@
         <image name="icon-idea" width="768" height="768"/>
         <image name="icon-new" width="256" height="256"/>
         <image name="icon-news" width="512" height="512"/>
+        <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AaZ-kk-a6O"/>
     </inferredMetricsTieBreakers>
-        <image name="settings" width="25" height="25"/>
-    </resources>
 </document>
