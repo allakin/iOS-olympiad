@@ -12,7 +12,7 @@ struct VkNews: News {
     var source: Source
     var date: Date
     var text: String?
-    var imagesURL: [URL]?
+    var imagesURL: [URL]
     var videosURL: [URL]?
     var likeCount: Int
     var commentCount: Int

@@ -29,9 +29,10 @@ static func loadTwitterNews(with swifter: Swifter, completionBlock: @escaping ([
 private static func prepareTwitterData(with json: [JSON], completionBlock: @escaping ([TwitterNews]?) -> ()) {
     
     var twitterNewsArray = [TwitterNews]()
-    var imagesURL = [URL]()
     
     json.forEach { (json) in
+        var imagesURL = [URL]()
+        
         let url = json["user"]["profile_image_url"].string
         let name = json["user"]["name"].string
         let dateJson = json["created_at"].string

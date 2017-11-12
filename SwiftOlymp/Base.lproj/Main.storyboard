@@ -23,16 +23,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="EFg-SN-Zy3">
-                        <barButtonItem key="leftBarButtonItem" title="settings" id="NWY-F2-fDG">
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="NWY-F2-fDG">
                             <connections>
-                                <segue destination="F29-x0-FDe" kind="show" id="H1v-qe-tJV"/>
+                                <segue destination="F29-x0-FDe" kind="show" identifier="settingsSegue" id="H1v-qe-tJV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djG-R6-zSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1781.5999999999999" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1826" y="36"/>
         </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="0et-qL-teT">
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5d-sg-kV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3688.8000000000002" y="35.532233883058474"/>
+            <point key="canvasLocation" x="3638" y="36"/>
         </scene>
         <!--Lentakrut View Controller-->
         <scene sceneID="BCE-Bb-snk">
@@ -257,4 +257,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="AaZ-kk-a6O"/>
     </inferredMetricsTieBreakers>
+        <image name="settings" width="25" height="25"/>
+    </resources>
 </document>
