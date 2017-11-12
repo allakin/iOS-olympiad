@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollectionViewDelegate {
     
@@ -25,7 +26,7 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
     @IBOutlet weak var textToCollectionConstraint: NSLayoutConstraint!
     
     let photoCellIdentifier = "photoCollectionCellIdentifier"
-    var photos: [UIImage]!
+    var photos: [URL]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,6 +38,7 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
         prepareConstraints(with: news)
         
         let source = news.source
+        avatarImageView.kf.setImage(with: source.avatarImageURL)
         //avatar
         nameLabel.text = source.name
         
@@ -51,6 +53,8 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
         likeCountLabel.text = String(news.likeCount)
         commentCountLabel.text = String(news.commentCount)
         repostCountLabel.text = String(news.repostCount)
+        
+        photos = news.imagesURL
     }
    
     func registrCell(){
@@ -96,7 +100,7 @@ class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCellIdentifier, for: indexPath) as! PhotoCustomCollectionViewCell
-        cell.prepareCell(with: photos[indexPath.row])
+        cell.photoImageView.kf.setImage(with: photos[indexPath.row])
         return cell
     }
     

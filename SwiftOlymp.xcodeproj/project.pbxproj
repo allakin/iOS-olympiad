@@ -26,10 +26,11 @@
 		9509782A1FB7788200F68431 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950978291FB7788200F68431 /* Extensions.swift */; };
 		9509782C1FB77B5F00F68431 /* ReloadDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509782B1FB77B5F00F68431 /* ReloadDataDelegate.swift */; };
 		9509782E1FB77E6900F68431 /* TwitterNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509782D1FB77E6900F68431 /* TwitterNews.swift */; };
-		95220DA71FB8923F00633E7A /* AutorizationInstagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DA61FB8923F00633E7A /* AutorizationInstagram.swift */; };
 		95220DAB1FB8977E00633E7A /* InstagramLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DAA1FB8977E00633E7A /* InstagramLoginViewController.swift */; };
 		95220DAD1FB89CB700633E7A /* TwitterNewsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DAC1FB89CB700633E7A /* TwitterNewsLoader.swift */; };
 		95220DB51FB8B35800633E7A /* InstagramNewsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DB41FB8B35800633E7A /* InstagramNewsLoader.swift */; };
+		9588F57C1FB8D0490009ABD3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9588F57B1FB8D0480009ABD3 /* Kingfisher.framework */; };
+		9588F57D1FB8D0490009ABD3 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9588F57B1FB8D0480009ABD3 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB022CB21FB76C7700B7E1AC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB022CB11FB76C7700B7E1AC /* SwiftyJSON.framework */; };
 		CB022CB41FB7726A00B7E1AC /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB022CB31FB7726A00B7E1AC /* Source.swift */; };
 		CB6A9AA61FB8A2E8009B04A8 /* PhotoCustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6A9AA41FB8A2E8009B04A8 /* PhotoCustomCollectionViewCell.swift */; };
@@ -50,6 +51,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9588F57D1FB8D0490009ABD3 /* Kingfisher.framework in Embed Frameworks */,
 				950978251FB73D7A00F68431 /* SwifteriOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -79,6 +81,7 @@
 		95220DAA1FB8977E00633E7A /* InstagramLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramLoginViewController.swift; sourceTree = "<group>"; };
 		95220DAC1FB89CB700633E7A /* TwitterNewsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterNewsLoader.swift; sourceTree = "<group>"; };
 		95220DB41FB8B35800633E7A /* InstagramNewsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramNewsLoader.swift; sourceTree = "<group>"; };
+		9588F57B1FB8D0480009ABD3 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		CB022CB11FB76C7700B7E1AC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		CB022CB31FB7726A00B7E1AC /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		CB6A9AA41FB8A2E8009B04A8 /* PhotoCustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9588F57C1FB8D0490009ABD3 /* Kingfisher.framework in Frameworks */,
 				950978231FB73D5600F68431 /* SwifteriOS.framework in Frameworks */,
 				23C2E8711FB6E65A00A04C30 /* VKSdkFramework.framework in Frameworks */,
 				950978241FB73D7A00F68431 /* SwifteriOS.framework in Frameworks */,
@@ -189,6 +193,7 @@
 		CBA3A7801FB4FEA800308FB7 = {
 			isa = PBXGroup;
 			children = (
+				9588F57B1FB8D0480009ABD3 /* Kingfisher.framework */,
 				CBA3A78B1FB4FEA800308FB7 /* SwiftOlymp */,
 				CBA3A78A1FB4FEA800308FB7 /* Products */,
 				23C2E86F1FB6E65A00A04C30 /* Frameworks */,
