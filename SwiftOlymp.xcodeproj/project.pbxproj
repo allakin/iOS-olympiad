@@ -26,6 +26,8 @@
 		9509782A1FB7788200F68431 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950978291FB7788200F68431 /* Extensions.swift */; };
 		9509782C1FB77B5F00F68431 /* ReloadDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509782B1FB77B5F00F68431 /* ReloadDataDelegate.swift */; };
 		9509782E1FB77E6900F68431 /* TwitterNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9509782D1FB77E6900F68431 /* TwitterNews.swift */; };
+		CB022CB21FB76C7700B7E1AC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB022CB11FB76C7700B7E1AC /* SwiftyJSON.framework */; };
+		CB022CB41FB7726A00B7E1AC /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB022CB31FB7726A00B7E1AC /* Source.swift */; };
 		CBA3A78D1FB4FEA800308FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */; };
 		CBA3A78F1FB4FEA800308FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */; };
 		CBA3A7921FB4FEA800308FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA3A7901FB4FEA800308FB7 /* Main.storyboard */; };
@@ -65,6 +67,8 @@
 		950978291FB7788200F68431 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9509782B1FB77B5F00F68431 /* ReloadDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadDataDelegate.swift; sourceTree = "<group>"; };
 		9509782D1FB77E6900F68431 /* TwitterNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterNews.swift; sourceTree = "<group>"; };
+		CB022CB11FB76C7700B7E1AC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		CB022CB31FB7726A00B7E1AC /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		CBA3A7891FB4FEA800308FB7 /* SwiftOlymp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOlymp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBA3A78E1FB4FEA800308FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				950978231FB73D5600F68431 /* SwifteriOS.framework in Frameworks */,
 				23C2E8711FB6E65A00A04C30 /* VKSdkFramework.framework in Frameworks */,
 				950978241FB73D7A00F68431 /* SwifteriOS.framework in Frameworks */,
+				CB022CB21FB76C7700B7E1AC /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +120,7 @@
 				23C517A31FB71DB2000FBD6B /* News.swift */,
 				23C517A51FB71EBE000FBD6B /* VkNews.swift */,
 				9509782D1FB77E6900F68431 /* TwitterNews.swift */,
+				CB022CB31FB7726A00B7E1AC /* Source.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				950978221FB73D5600F68431 /* SwifteriOS.framework */,
+				CB022CB11FB76C7700B7E1AC /* SwiftyJSON.framework */,
 				23C2E8701FB6E65A00A04C30 /* VKSdkFramework.framework */,
 			);
 			name = Frameworks;
@@ -269,6 +276,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/VKSdkFramework.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
@@ -298,6 +306,7 @@
 				950978281FB7715000F68431 /* AutorizationTwitter.swift in Sources */,
 				23C517991FB6EEE0000FBD6B /* SettingsTableViewController.swift in Sources */,
 				9509782C1FB77B5F00F68431 /* ReloadDataDelegate.swift in Sources */,
+				CB022CB41FB7726A00B7E1AC /* Source.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,7 @@
 import Foundation
 
 struct VkNews: News {
-    var avatarImageURL: URL
-    var name: String
+    var source: Source
     var date: Date
     var text: String?
     var imagesURL: [URL]?
