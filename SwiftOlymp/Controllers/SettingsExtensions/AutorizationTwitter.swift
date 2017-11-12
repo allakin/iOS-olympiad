@@ -51,6 +51,9 @@ extension SettingsTableViewController: SFSafariViewControllerDelegate {
             let url = URL(string: "swifter://success")!
             swifter.authorize(with: url, presentFrom: self, success: { _, _ in
                 self.navigationController?.popViewController(animated: true)
+                NewsLoader.loadTwitterNews(with: swifter, completionBlock: { (tweets) in
+                    print(tweets)
+                })
             }, failure: failureHandler)
         }
     }

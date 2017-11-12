@@ -53,7 +53,7 @@ class NewsLoader {
         json.forEach { (json) in
             let url = json["user"]["profile_image_url"].string
             let name = json["user"]["name"].string
-            //let dateJson = json["created_at"].string
+            let dateJson = json["created_at"].string
             let text =  json["text"].string
             let imagesURLJson = json["extended_entities"]["media"].array
             let videosURL: [URL]? = nil
@@ -70,6 +70,12 @@ class NewsLoader {
                 }
             }
             
+            let dateFormatter = DateFormatter()
+            //dateFormatter.date(from: "EEE MMM dd HH:mm:ss Z yyyy")
+            dateFormatter.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
+            let tweetDate = dateFormatter.date(from: dateJson!)
+            
+            
             guard let tweetUrl = url else { return }
             
             guard let tweetAvatar = URL(string: tweetUrl) else { return }
@@ -82,9 +88,9 @@ class NewsLoader {
             
             guard let tweetRepostCount = repostCount else { return }
             
-            let date = Date()
+            //let date = Date()
             
-            let tweet = TwitterNews(avatarImageURL: tweetAvatar, name: tweetName, date: date, text: tweetText, imagesURL: imagesURL, videosURL: videosURL, likeCount: Int(tweetLikeCount), commentCount: commentCount, repostCount: Int(tweetRepostCount), links: links)
+            let tweet = TwitterNews(avatarImageURL: tweetAvatar, name: tweetName, date: tweetDate!, text: tweetText, imagesURL: imagesURL, videosURL: videosURL, likeCount: Int(tweetLikeCount), commentCount: commentCount, repostCount: Int(tweetRepostCount), links: links)
             
             twitterNewsArray.append(tweet)
         
