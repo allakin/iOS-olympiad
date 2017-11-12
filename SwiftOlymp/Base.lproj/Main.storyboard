@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Newsfeed Table View Controller-->
         <scene sceneID="5Fi-Pd-tG5">
             <objects>
-                <tableViewController id="c16-KO-Lyg" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TweetsViewController" id="c16-KO-Lyg" customClass="NewsfeedTableViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hWJ-L3-Pfz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djG-R6-zSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442.4000000000001" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1781.5999999999999" y="37.331334332833585"/>
         </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="0et-qL-teT">
@@ -50,7 +50,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rx-eq-PmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2284" y="35.532233883058474"/>
+            <point key="canvasLocation" x="2623.1999999999998" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PVE-Hr-ucZ">
@@ -68,7 +68,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqf-d4-ue7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="37"/>
+            <point key="canvasLocation" x="1105" y="36"/>
         </scene>
     </scenes>
 </document>
