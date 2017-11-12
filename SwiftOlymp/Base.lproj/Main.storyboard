@@ -33,14 +33,15 @@
             </objects>
             <point key="canvasLocation" x="1442.4000000000001" y="37.331334332833585"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings Table View Controller-->
         <scene sceneID="0et-qL-teT">
             <objects>
-                <tableViewController id="F29-x0-FDe" sceneMemberID="viewController">
+                <tableViewController id="F29-x0-FDe" customClass="SettingsTableViewController" customModule="SwiftOlymp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LCd-vG-F7d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="F29-x0-FDe" id="THy-Qg-1bu"/>
                             <outlet property="delegate" destination="F29-x0-FDe" id="5IX-7I-Iao"/>
@@ -49,7 +50,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rx-eq-PmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2284" y="36"/>
+            <point key="canvasLocation" x="2284" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PVE-Hr-ucZ">
