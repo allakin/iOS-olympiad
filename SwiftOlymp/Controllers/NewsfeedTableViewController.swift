@@ -43,9 +43,9 @@ class NewsfeedTableViewController: UITableViewController, ReloadDataDelegate {
     func reloadData(with helper: Any?, and type: SocialNetworkType) {
         if type == .twitter {
             guard let swifter = helper as? Swifter else { return }
-            NewsLoader.loadTwitterNews(with: swifter, completionBlock: { (tweets) in
-                
-            })
+            //NewsLoader.loadTwitterNews(with: swifter, completionBlock: { (tweets) in
+//                
+//            })
         }
     }
 
