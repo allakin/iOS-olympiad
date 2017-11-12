@@ -29,6 +29,7 @@
 		95220DA71FB8923F00633E7A /* AutorizationInstagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DA61FB8923F00633E7A /* AutorizationInstagram.swift */; };
 		95220DAB1FB8977E00633E7A /* InstagramLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DAA1FB8977E00633E7A /* InstagramLoginViewController.swift */; };
 		95220DAD1FB89CB700633E7A /* TwitterNewsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DAC1FB89CB700633E7A /* TwitterNewsLoader.swift */; };
+		95220DB51FB8B35800633E7A /* InstagramNewsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95220DB41FB8B35800633E7A /* InstagramNewsLoader.swift */; };
 		CB022CB21FB76C7700B7E1AC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB022CB11FB76C7700B7E1AC /* SwiftyJSON.framework */; };
 		CB022CB41FB7726A00B7E1AC /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB022CB31FB7726A00B7E1AC /* Source.swift */; };
 		CBA3A78D1FB4FEA800308FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA3A78C1FB4FEA800308FB7 /* AppDelegate.swift */; };
@@ -73,6 +74,7 @@
 		95220DA61FB8923F00633E7A /* AutorizationInstagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationInstagram.swift; sourceTree = "<group>"; };
 		95220DAA1FB8977E00633E7A /* InstagramLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramLoginViewController.swift; sourceTree = "<group>"; };
 		95220DAC1FB89CB700633E7A /* TwitterNewsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterNewsLoader.swift; sourceTree = "<group>"; };
+		95220DB41FB8B35800633E7A /* InstagramNewsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramNewsLoader.swift; sourceTree = "<group>"; };
 		CB022CB11FB76C7700B7E1AC /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		CB022CB31FB7726A00B7E1AC /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		CBA3A7891FB4FEA800308FB7 /* SwiftOlymp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOlymp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 				23C517A81FB721CB000FBD6B /* NewsLoader.swift */,
 				950978291FB7788200F68431 /* Extensions.swift */,
 				95220DAC1FB89CB700633E7A /* TwitterNewsLoader.swift */,
+				95220DB41FB8B35800633E7A /* InstagramNewsLoader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				23C5179F1FB7049E000FBD6B /* AutorizationVK.swift in Sources */,
 				CBA3A78D1FB4FEA800308FB7 /* AppDelegate.swift in Sources */,
 				23C517A91FB721CB000FBD6B /* NewsLoader.swift in Sources */,
+				95220DB51FB8B35800633E7A /* InstagramNewsLoader.swift in Sources */,
 				95220DAD1FB89CB700633E7A /* TwitterNewsLoader.swift in Sources */,
 				9509782E1FB77E6900F68431 /* TwitterNews.swift in Sources */,
 				23C517A21FB717EB000FBD6B /* NewsfeedTableViewController.swift in Sources */,
