@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostTableViewCell: UITableViewCell {
+class PostTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollectionViewDelegate {
     
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,8 +24,13 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarToTextConstraint: NSLayoutConstraint!
     @IBOutlet weak var textToCollectionConstraint: NSLayoutConstraint!
     
+    let photoCellIdentifier = "photoCollectionCellIdentifier"
+    var photos: [UIImage]!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        registrCell()
+        setDelegateAndDataSource()
     }
 
     func prepareCell(with news: News) {
@@ -46,6 +51,16 @@ class PostTableViewCell: UITableViewCell {
         likeCountLabel.text = String(news.likeCount)
         commentCountLabel.text = String(news.commentCount)
         repostCountLabel.text = String(news.repostCount)
+    }
+   
+    func registrCell(){
+        let photoCellNib = UINib(nibName: "PhotoCustomCollectionViewCell", bundle: nil)
+        photoCollectionView.register(photoCellNib, forCellWithReuseIdentifier: photoCellIdentifier)
+    }
+    
+    func setDelegateAndDataSource() {
+        photoCollectionView.delegate = self
+        photoCollectionView.dataSource = self
     }
     
     private func prepareConstraints(with news: News) {
@@ -68,6 +83,16 @@ class PostTableViewCell: UITableViewCell {
             textToCollectionConstraint.priority = .defaultHigh
             textToLikeConstraint.priority = .defaultLow
         }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCellIdentifier, for: indexPath) as! PhotoCustomCollectionViewCell
+        cell.prepareCell(with: photos[indexPath.row])
+        return cell
     }
     
 }
