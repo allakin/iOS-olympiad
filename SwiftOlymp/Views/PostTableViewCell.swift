@@ -49,11 +49,15 @@ class PostTableViewCell: UITableViewCell {
     }
     
     private func prepareConstraints(with news: News) {
-        if news.text == nil {
+        
+        
+        if news.text == nil, news.imagesURL != nil {
             textContentLabel.isHidden = true
             avatarToTextConstraint.priority = .defaultLow
             avatarToCollectionConstraint.priority = .defaultHigh
-        } else {
+        }
+        
+        if news.text != nil, news.imagesURL != nil {
             textContentLabel.isHidden = false
             avatarToTextConstraint.priority = .defaultHigh
             avatarToCollectionConstraint.priority = .defaultLow
@@ -63,7 +67,8 @@ class PostTableViewCell: UITableViewCell {
             photoCollectionView.isHidden = true
             textToCollectionConstraint.priority = .defaultLow
             textToLikeConstraint.priority = .defaultHigh
-        } else {
+        }
+        if news.text != nil, news.imagesURL != nil{
             photoCollectionView.isHidden = false
             textToCollectionConstraint.priority = .defaultHigh
             textToLikeConstraint.priority = .defaultLow
